@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #555;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header>nav>ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 7vh;
+}
+
+header>nav>ul>li>a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 35px;
+}
