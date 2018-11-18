@@ -1,12 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #555;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #555;
 }
+
 
 header>nav>ul {
     display: flex;
@@ -23,4 +24,139 @@ header>nav>ul>li>a {
     font-weight: bold;
     text-align: center;
     padding: 12px 35px;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+section:first-child {
+    height: calc(93vh-51px);
+}
+
+.main-header {
+    padding: 15vh 0 0 40px;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.animated-heading {
+    padding: 0px 0 0 40px;
+    position: relative;
+}
+
+.animated-heading>h2 {
+    position: absolute;
+    font-size: 60px;
+}
+
+
+.animated-heading1 {
+    animation: dnone 1s 4s infinite;
+    z-index: 3;
+}
+
+.animated-heading2 {
+    animation: dnone 1s 10s infinite;
+    z-index: 2;
+}
+
+.animated-heading3 {
+    z-index: 1;
+}
+
+
+.animated-heading1::after,
+.animated-heading2::after,
+.animated-heading3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+    border-left: 5px solid transparent;
+    box-sizing: box;
+}
+
+.animated-heading1::after {
+    animation: typing 2s 2 steps(8) alternate;
+}
+
+.animated-heading2::after {
+    animation: typing 3s 2 4s steps(10) alternate;
+}
+
+.animated-heading3::after {
+    animation: typing 2s 1 10s steps(6) forwards;
+}
+
+@keyframes typing {
+    0% {
+        border-left: 5px solid black;
+        left: 0;
+    }
+
+    10% {
+        border-left: 5px solid black;
+        left: 0;
+    }
+
+    10.1% {
+        border-left-color: #555;
+    }
+
+    30% {
+        border-left-color: #555;
+    }
+
+    30.1% {
+        border-left-color: black;
+    }
+
+    50% {
+        border-left-color: black;
+    }
+
+    50.1% {
+        border-left-color: #555;
+    }
+
+    70% {
+        border-left-color: #555;
+    }
+
+    70.1% {
+        border-left-color: black;
+    }
+
+
+    90% {
+        border-left-color: black;
+    }
+
+    90.1% {
+        left: 100%;
+        border-left-color: #555;
+    }
+
+    99.9% {
+        border-left-color: #555;
+    }
+
+    100% {
+        border-left: 5px solid black;
+        left: 100%;
+    }
+}
+
+@keyframes dnone {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
